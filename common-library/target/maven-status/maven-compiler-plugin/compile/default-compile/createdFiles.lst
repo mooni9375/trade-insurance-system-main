@@ -1,0 +1,14 @@
+com/tradeInsurance/commonlibrary/domain/valueobject/ReviewStatus.class
+com/tradeInsurance/commonlibrary/domain/valueobject/BaseId.class
+com/tradeInsurance/commonlibrary/domain/exception/DomainException.class
+com/tradeInsurance/commonlibrary/domain/event/publisher/DomainEventPublisher.class
+com/tradeInsurance/commonlibrary/domain/valueobject/ReviewId.class
+com/tradeInsurance/commonlibrary/domain/entity/BaseEntity.class
+com/tradeInsurance/commonlibrary/domain/event/DomainEvent.class
+com/tradeInsurance/commonlibrary/domain/valueobject/AppId.class
+com/tradeInsurance/commonlibrary/domain/valueobject/Money.class
+com/tradeInsurance/commonlibrary/domain/valueobject/CustomerId.class
+com/tradeInsurance/commonlibrary/domain/entity/AggregateRoot.class
+com/tradeInsurance/commonlibrary/domain/valueobject/AppStatus.class
+com/tradeInsurance/commonlibrary/domain/valueobject/PhoneNumber.class
+com/tradeInsurance/commonlibrary/domain/valueobject/CountryCode.class

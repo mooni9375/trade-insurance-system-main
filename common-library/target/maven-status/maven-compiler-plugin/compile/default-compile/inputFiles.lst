@@ -1,0 +1,14 @@
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/entity/AggregateRoot.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/entity/BaseEntity.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/event/DomainEvent.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/event/publisher/DomainEventPublisher.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/exception/DomainException.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/AppId.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/AppStatus.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/BaseId.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/CountryCode.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/CustomerId.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/Money.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/PhoneNumber.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/ReviewId.java
+/Users/mooni/development/tradeInsurance/common-library/src/main/java/com/tradeInsurance/commonlibrary/domain/valueobject/ReviewStatus.java
