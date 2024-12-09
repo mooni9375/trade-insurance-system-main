@@ -59,7 +59,7 @@ management:
         include: "*"
   endpoint:
     info:
-      enabled: true
+      access: unrestricted
     health:
       show-details: always
 
