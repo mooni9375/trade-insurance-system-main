@@ -1,5 +1,4 @@
-package com.tradeinsurance.appapplicationservice.dto.create;
-
+package com.tradeInsurance.applicationservice.dto.create;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;

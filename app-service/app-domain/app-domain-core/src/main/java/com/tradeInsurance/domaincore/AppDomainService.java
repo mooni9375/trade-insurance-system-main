@@ -1,7 +1,7 @@
-package com.tradeinsurance.appdomaincore;
+package com.tradeInsurance.domaincore;
 
-import com.tradeinsurance.appdomaincore.entity.App;
-import com.tradeinsurance.appdomaincore.event.AppCreatedEvent;
+import com.tradeInsurance.domaincore.entity.App;
+import com.tradeInsurance.domaincore.event.AppCreatedEvent;
 
 public interface AppDomainService {
 

@@ -1,6 +1,6 @@
-package com.tradeinsurance.appapplicationservice.ports.output.repository;
+package com.tradeInsurance.applicationservice.ports.output.repository;
 
-import com.tradeinsurance.appdomaincore.entity.Customer;
+import com.tradeInsurance.domaincore.entity.Customer;
 
 import java.util.Optional;
 import java.util.UUID;

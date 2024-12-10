@@ -1,7 +1,7 @@
-package com.tradeinsurance.appapplicationservice.ports.input.service;
+package com.tradeInsurance.applicationservice.ports.input.service;
 
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppCommand;
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppResponse;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppResponse;
 import jakarta.validation.Valid;
 
 public interface AppApplicationService {

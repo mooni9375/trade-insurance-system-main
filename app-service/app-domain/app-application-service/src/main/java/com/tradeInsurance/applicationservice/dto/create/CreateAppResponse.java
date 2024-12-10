@@ -1,6 +1,6 @@
-package com.tradeinsurance.appapplicationservice.dto.create;
+package com.tradeInsurance.applicationservice.dto.create;
 
-import com.tradeinsurance.commonlibrary.domain.valueobject.AppStatus;
+import com.tradeInsurance.commonlibrary.domain.valueobject.AppStatus;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

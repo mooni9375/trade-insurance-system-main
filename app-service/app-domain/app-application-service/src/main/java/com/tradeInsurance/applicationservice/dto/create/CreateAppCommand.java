@@ -1,11 +1,10 @@
-package com.tradeinsurance.appapplicationservice.dto.create;
+package com.tradeInsurance.applicationservice.dto.create;
 
-import com.tradeinsurance.commonlibrary.domain.valueobject.CountryCode;
+import com.tradeInsurance.commonlibrary.domain.valueobject.CountryCode;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.UUID;

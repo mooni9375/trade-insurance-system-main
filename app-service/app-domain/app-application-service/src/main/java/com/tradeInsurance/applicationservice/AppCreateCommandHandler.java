@@ -1,11 +1,11 @@
-package com.tradeinsurance.appapplicationservice;
+package com.tradeInsurance.applicationservice;
 
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppCommand;
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppResponse;
-import com.tradeinsurance.appapplicationservice.dto.message.AppReviewMessage;
-import com.tradeinsurance.appapplicationservice.mapper.AppDataMapper;
-import com.tradeinsurance.appapplicationservice.ports.output.message.publisher.review.ReviewRequestMessagePublisher;
-import com.tradeinsurance.appdomaincore.event.AppCreatedEvent;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppResponse;
+import com.tradeInsurance.applicationservice.dto.message.AppReviewMessage;
+import com.tradeInsurance.applicationservice.mapper.AppDataMapper;
+import com.tradeInsurance.applicationservice.ports.output.message.publisher.review.ReviewRequestMessagePublisher;
+import com.tradeInsurance.domaincore.event.AppCreatedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -39,10 +39,12 @@ public class AppCreateCommandHandler {
         log.info("App is created with id: {}", appCreatedEvent.getApp().getId().getValue());
 
         // Event publishing
-        // AppCreatedEvent -> AppReviewMessage : 변환해서 넘겨줘야 함
+        // Mapping : AppCreatedEvent -> AppReviewMessage
         AppReviewMessage appReviewMessage = appDataMapper.appCreatedEventToAppReviewMessage(appCreatedEvent);
         reviewRequestMessagePublisher.publish(appReviewMessage);
 
+        // Response return
+        // Mapping : AppCreatedEvent -> CreateAppResponse
         return appDataMapper.appToCreateAppResponse(appCreatedEvent.getApp(), "App created successfully.");
     }
 

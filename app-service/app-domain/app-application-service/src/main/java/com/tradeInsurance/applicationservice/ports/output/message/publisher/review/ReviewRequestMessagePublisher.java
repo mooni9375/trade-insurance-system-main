@@ -1,6 +1,6 @@
-package com.tradeinsurance.appapplicationservice.ports.output.message.publisher.review;
+package com.tradeInsurance.applicationservice.ports.output.message.publisher.review;
 
-import com.tradeinsurance.appapplicationservice.dto.message.AppReviewMessage;
+import com.tradeInsurance.applicationservice.dto.message.AppReviewMessage;
 
 public interface ReviewRequestMessagePublisher {
 

@@ -1,8 +1,8 @@
-package com.tradeinsurance.appapplicationservice;
+package com.tradeInsurance.applicationservice;
 
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppCommand;
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppResponse;
-import com.tradeinsurance.appapplicationservice.ports.input.service.AppApplicationService;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppResponse;
+import com.tradeInsurance.applicationservice.ports.input.service.AppApplicationService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

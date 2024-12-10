@@ -1,11 +1,14 @@
 package com.tradeInsurance.application.rest;
 
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppResponse;
+import com.tradeInsurance.applicationservice.ports.input.service.AppApplicationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AppController {
 
     private Environment env;
+    private AppApplicationService appApplicationService;
 
     @Autowired
     public AppController(Environment env) {
@@ -34,6 +38,37 @@ public class AppController {
 
         return stringBuilder.toString();
     }
+
+    @PostMapping("/save")
+    public ResponseEntity<CreateAppResponse> createApp(@RequestBody CreateAppCommand createAppCommand) {
+
+        CreateAppResponse createAppResponse = appApplicationService.createApp(createAppCommand);
+
+        return ResponseEntity.ok(createAppResponse);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

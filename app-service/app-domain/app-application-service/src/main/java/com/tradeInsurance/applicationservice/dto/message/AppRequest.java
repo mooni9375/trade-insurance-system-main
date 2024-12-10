@@ -1,4 +1,4 @@
-package com.tradeinsurance.appapplicationservice.dto.message;
+package com.tradeInsurance.applicationservice.dto.message;
 
 public class AppRequest {
 

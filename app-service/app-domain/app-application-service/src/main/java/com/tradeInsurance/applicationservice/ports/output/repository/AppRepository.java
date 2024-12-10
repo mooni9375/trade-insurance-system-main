@@ -1,9 +1,6 @@
-package com.tradeinsurance.appapplicationservice.ports.output.repository;
+package com.tradeInsurance.applicationservice.ports.output.repository;
 
-import com.tradeinsurance.appdomaincore.entity.App;
-import com.tradeinsurance.commonlibrary.domain.valueobject.AppId;
-
-import java.util.Optional;
+import com.tradeInsurance.domaincore.entity.App;
 
 public interface AppRepository {
 

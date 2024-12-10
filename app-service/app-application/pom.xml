@@ -31,6 +31,13 @@
     </properties>
 
     <dependencies>
+        <!-- Internal Dependencies -->
+        <dependency>
+            <groupId>com.tradeInsurance</groupId>
+            <artifactId>app-application-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

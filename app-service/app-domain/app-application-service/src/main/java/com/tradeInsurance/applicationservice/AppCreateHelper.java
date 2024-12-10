@@ -1,14 +1,14 @@
-package com.tradeinsurance.appapplicationservice;
+package com.tradeInsurance.applicationservice;
 
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppCommand;
-import com.tradeinsurance.appapplicationservice.mapper.AppDataMapper;
-import com.tradeinsurance.appapplicationservice.ports.output.repository.AppRepository;
-import com.tradeinsurance.appapplicationservice.ports.output.repository.CustomerRepository;
-import com.tradeinsurance.appdomaincore.AppDomainService;
-import com.tradeinsurance.appdomaincore.entity.App;
-import com.tradeinsurance.appdomaincore.entity.Customer;
-import com.tradeinsurance.appdomaincore.event.AppCreatedEvent;
-import com.tradeinsurance.appdomaincore.exception.AppDomainException;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.mapper.AppDataMapper;
+import com.tradeInsurance.applicationservice.ports.output.repository.AppRepository;
+import com.tradeInsurance.applicationservice.ports.output.repository.CustomerRepository;
+import com.tradeInsurance.domaincore.AppDomainService;
+import com.tradeInsurance.domaincore.entity.App;
+import com.tradeInsurance.domaincore.entity.Customer;
+import com.tradeInsurance.domaincore.event.AppCreatedEvent;
+import com.tradeInsurance.domaincore.exception.AppDomainException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

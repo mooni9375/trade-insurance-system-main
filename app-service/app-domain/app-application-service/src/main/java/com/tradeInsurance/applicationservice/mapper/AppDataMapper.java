@@ -1,15 +1,15 @@
-package com.tradeinsurance.appapplicationservice.mapper;
+package com.tradeInsurance.applicationservice.mapper;
 
 
-import com.tradeinsurance.appapplicationservice.dto.create.AppStreetAddress;
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppCommand;
-import com.tradeinsurance.appapplicationservice.dto.create.CreateAppResponse;
-import com.tradeinsurance.appapplicationservice.dto.message.AppReviewMessage;
-import com.tradeinsurance.appdomaincore.entity.App;
-import com.tradeinsurance.appdomaincore.event.AppCreatedEvent;
-import com.tradeinsurance.appdomaincore.valueobject.StreetAddress;
-import com.tradeinsurance.commonlibrary.domain.valueobject.CustomerId;
-import com.tradeinsurance.commonlibrary.domain.valueobject.Money;
+import com.tradeInsurance.applicationservice.dto.create.AppStreetAddress;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppCommand;
+import com.tradeInsurance.applicationservice.dto.create.CreateAppResponse;
+import com.tradeInsurance.applicationservice.dto.message.AppReviewMessage;
+import com.tradeInsurance.domaincore.entity.App;
+import com.tradeInsurance.domaincore.event.AppCreatedEvent;
+import com.tradeInsurance.domaincore.valueobject.StreetAddress;
+import com.tradeInsurance.commonlibrary.domain.valueobject.CustomerId;
+import com.tradeInsurance.commonlibrary.domain.valueobject.Money;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
