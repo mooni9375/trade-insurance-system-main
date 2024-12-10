@@ -13,8 +13,8 @@ import java.util.UUID;
 @AllArgsConstructor
 public class CreateAppResponse {
 
-    @NotNull
-    private final UUID appTrackingId;
+//    @NotNull
+//    private final UUID appTrackingId;
 
     @NotNull
     private final AppStatus appStatus;
