@@ -14,7 +14,8 @@
         <module>app-container</module>
         <module>app-dataaccess</module>
         <module>app-domain</module>
-<!--        <module>app-domain/app-application-service</module>-->
+        <module>app-messaging</module>
+        <!--        <module>app-domain/app-application-service</module>-->
 <!--        <module>app-domain/app-domain-core</module>-->
     </modules>
 

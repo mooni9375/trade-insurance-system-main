@@ -2,9 +2,9 @@ package com.tradeInsurance.domain;
 
 import com.tradeInsurance.domain.dto.create.CreateAppCommand;
 import com.tradeInsurance.domain.dto.create.CreateAppResponse;
-import com.tradeInsurance.domain.dto.message.AppReviewMessage;
+//import com.tradeInsurance.domain.dto.message.AppReviewMessage;
 import com.tradeInsurance.domain.mapper.AppDataMapper;
-import com.tradeInsurance.domain.ports.output.message.publisher.review.ReviewRequestMessagePublisher;
+//import com.tradeInsurance.domain.ports.output.message.publisher.review.ReviewRequestMessagePublisher;
 import com.tradeInsurance.domain.event.AppCreatedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +16,16 @@ public class AppCreateCommandHandler {
 
     private final AppCreateHelper appCreateHelper;
     private final AppDataMapper appDataMapper;
-    private final ReviewRequestMessagePublisher reviewRequestMessagePublisher;
+//    private final ReviewRequestMessagePublisher reviewRequestMessagePublisher;
 
     @Autowired
     public AppCreateCommandHandler(AppCreateHelper appCreateHelper,
-                                   AppDataMapper appDataMapper,
-                                   ReviewRequestMessagePublisher reviewRequestMessagePublisher) {
+                                   AppDataMapper appDataMapper
+//                                   ReviewRequestMessagePublisher reviewRequestMessagePublisher
+    ) {
         this.appCreateHelper = appCreateHelper;
         this.appDataMapper = appDataMapper;
-        this.reviewRequestMessagePublisher = reviewRequestMessagePublisher;
+//        this.reviewRequestMessagePublisher = reviewRequestMessagePublisher;
     }
 
     /**
@@ -40,8 +41,8 @@ public class AppCreateCommandHandler {
 
         // Event publishing
         // Mapping : AppCreatedEvent -> AppReviewMessage
-        AppReviewMessage appReviewMessage = appDataMapper.appCreatedEventToAppReviewMessage(appCreatedEvent);
-        reviewRequestMessagePublisher.publish(appReviewMessage);
+//        AppReviewMessage appReviewMessage = appDataMapper.appCreatedEventToAppReviewMessage(appCreatedEvent);
+//        reviewRequestMessagePublisher.publish(appReviewMessage);
 
         // Response return
         // Mapping : AppCreatedEvent -> CreateAppResponse
