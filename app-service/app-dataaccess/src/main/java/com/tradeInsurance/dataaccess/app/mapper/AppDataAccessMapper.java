@@ -1,7 +1,7 @@
-package com.tradeInsurance.appdataaccess.app.mapper;
+package com.tradeInsurance.dataaccess.app.mapper;
 
-import com.tradeInsurance.appdataaccess.app.entity.AppEntity;
-import com.tradeInsurance.appdataaccess.app.entity.AppStreetAddressEntity;
+import com.tradeInsurance.dataaccess.app.entity.AppEntity;
+import com.tradeInsurance.dataaccess.app.entity.AppStreetAddressEntity;
 import com.tradeInsurance.commonlibrary.domain.valueobject.AppId;
 import com.tradeInsurance.commonlibrary.domain.valueobject.CustomerId;
 import com.tradeInsurance.commonlibrary.domain.valueobject.Money;

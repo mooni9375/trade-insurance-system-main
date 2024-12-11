@@ -1,7 +1,7 @@
-package com.tradeInsurance.appdataaccess.app.adapter;
+package com.tradeInsurance.dataaccess.app.adapter;
 
-import com.tradeInsurance.appdataaccess.app.mapper.AppDataAccessMapper;
-import com.tradeInsurance.appdataaccess.app.repository.AppJpaRepository;
+import com.tradeInsurance.dataaccess.app.mapper.AppDataAccessMapper;
+import com.tradeInsurance.dataaccess.app.repository.AppJpaRepository;
 import com.tradeInsurance.domain.entity.App;
 import com.tradeInsurance.domain.ports.output.repository.AppRepository;
 import org.springframework.beans.factory.annotation.Autowired;

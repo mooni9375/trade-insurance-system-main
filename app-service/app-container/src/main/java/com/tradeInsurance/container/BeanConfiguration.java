@@ -1,6 +1,5 @@
 package com.tradeInsurance.container;
 
-import com.tradeInsurance.appdataaccess.app.mapper.AppDataAccessMapper;
 import com.tradeInsurance.domain.AppDomainService;
 import com.tradeInsurance.domain.AppDomainServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +13,4 @@ public class BeanConfiguration {
         return new AppDomainServiceImpl();
     }
 
-    @Bean
-    public AppDataAccessMapper appDataAccessMapper() {
-        return new AppDataAccessMapper();
-    }
 }

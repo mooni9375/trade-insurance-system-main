@@ -1,6 +1,6 @@
-package com.tradeInsurance.appdataaccess.app.repository;
+package com.tradeInsurance.dataaccess.app.repository;
 
-import com.tradeInsurance.appdataaccess.app.entity.AppEntity;
+import com.tradeInsurance.dataaccess.app.entity.AppEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

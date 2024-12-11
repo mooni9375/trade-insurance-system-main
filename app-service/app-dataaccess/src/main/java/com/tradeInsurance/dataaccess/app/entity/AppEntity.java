@@ -1,4 +1,4 @@
-package com.tradeInsurance.appdataaccess.app.entity;
+package com.tradeInsurance.dataaccess.app.entity;
 
 import com.tradeInsurance.commonlibrary.domain.valueobject.AppStatus;
 import com.tradeInsurance.commonlibrary.domain.valueobject.CountryCode;
