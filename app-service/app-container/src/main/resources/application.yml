@@ -14,7 +14,7 @@ spring:
   application:
     name: app-service
   jpa:
-    open-in-view: false
+    open-in-view: true
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:

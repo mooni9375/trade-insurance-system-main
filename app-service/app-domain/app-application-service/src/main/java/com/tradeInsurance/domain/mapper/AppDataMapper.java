@@ -18,13 +18,14 @@ import java.util.UUID;
 public class AppDataMapper {
 
     public App createAppCommandToApp(CreateAppCommand createAppCommand) {
+
         return App.builder()
                 .customerId(new CustomerId(createAppCommand.getCustomerId()))
                 .exporterName(createAppCommand.getExporterName())
-                .exporterAddress(appStreetAdderToStreetAddress(createAppCommand.getExporterAddress()))
+                .exporterAddress(appStreetAdderssToStreetAddress(createAppCommand.getExporterAddress()))
                 .importerCountryCode(createAppCommand.getImporterCountryCode())
                 .importerName(createAppCommand.getImporterName())
-                .importerAddress(appStreetAdderToStreetAddress(createAppCommand.getImporterAddress()))
+                .importerAddress(appStreetAdderssToStreetAddress(createAppCommand.getImporterAddress()))
                 .appAmount(new Money(createAppCommand.getAppAmount()))
                 .exportProduct(createAppCommand.getExportProduct())
                 .build();
@@ -54,7 +55,7 @@ public class AppDataMapper {
 //                .build();
 //    }
 
-    private StreetAddress appStreetAdderToStreetAddress(AppStreetAddress appStreetAddress) {
+    private StreetAddress appStreetAdderssToStreetAddress(AppStreetAddress appStreetAddress) {
         return new StreetAddress(UUID.randomUUID(),
                 appStreetAddress.getStreet(),
                 appStreetAddress.getCity(),

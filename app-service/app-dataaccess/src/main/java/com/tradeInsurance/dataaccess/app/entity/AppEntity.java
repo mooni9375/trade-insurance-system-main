@@ -20,7 +20,9 @@ public class AppEntity {
 
     @Id
     private UUID id;
+
     private UUID customerId;
+
     private UUID trackingId;
 
     private String exporterName;
@@ -34,13 +36,17 @@ public class AppEntity {
     private AppStreetAddressEntity exporterAddress;
 
     private CountryCode importerCountryCode;
+
     private String importerName;
+
     @OneToOne(mappedBy = "app", cascade = CascadeType.ALL)
     private AppStreetAddressEntity importerAddress;
 
     private String exportProduct;
+
     //@Convert(converter = MoneyConverter.class) -> BigDecimal
     private BigDecimal appAmount;
+
     @Enumerated(EnumType.STRING)
     private AppStatus appStatus;
 
@@ -61,5 +67,6 @@ public class AppEntity {
     public int hashCode() {
         return Objects.hashCode(id);
     }
+
 }
 

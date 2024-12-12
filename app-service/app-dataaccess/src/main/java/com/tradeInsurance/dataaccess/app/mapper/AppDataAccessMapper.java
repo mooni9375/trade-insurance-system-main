@@ -36,6 +36,7 @@ public class AppDataAccessMapper {
 
         // 양방향 연관관계 설정
         appEntity.getExporterAddress().setApp(appEntity);
+        appEntity.getImporterAddress().setApp(appEntity);
 
         return appEntity;
     }
