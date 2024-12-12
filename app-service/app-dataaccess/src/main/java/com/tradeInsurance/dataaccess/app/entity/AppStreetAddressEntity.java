@@ -19,8 +19,11 @@ public class AppStreetAddressEntity {
     @Id
     private UUID id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "APP_ID")
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "APP_ID")
+//    private AppEntity app;
+    @ManyToOne
+    @JoinColumn(name = "app_id")
     private AppEntity app;
 
     private String street;

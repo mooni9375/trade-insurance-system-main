@@ -26,20 +26,29 @@ public class AppEntity {
     private UUID trackingId;
 
     private String exporterName;
+
     //    @Embedded
 //    @AttributeOverrides({
 //                    @AttributeOverride(name = "street", column = @Column(name = "exporter_street")),
 //                    @AttributeOverride(name = "postalCode", column = @Column(name = "exporter_postal_code")),
 //                    @AttributeOverride(name = "city", column = @Column(name = "exporter_city"))
 //    })
-    @OneToOne(mappedBy = "app", cascade = CascadeType.ALL)
+
+//    @OneToOne(mappedBy = "app", cascade = CascadeType.ALL)
+//    private AppStreetAddressEntity exporterAddress;
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "exporter_address_id", referencedColumnName = "id")
     private AppStreetAddressEntity exporterAddress;
 
+    @Enumerated(EnumType.STRING)
     private CountryCode importerCountryCode;
 
     private String importerName;
 
-    @OneToOne(mappedBy = "app", cascade = CascadeType.ALL)
+//    @OneToOne(mappedBy = "app", cascade = CascadeType.ALL)
+//    private AppStreetAddressEntity importerAddress;
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "importer_address_id", referencedColumnName = "id")
     private AppStreetAddressEntity importerAddress;
 
     private String exportProduct;
