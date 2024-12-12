@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/")
+@RequestMapping(value = "/", produces = "application/vnd.api.v1+json")
 public class AppController {
 
     private final Environment env;

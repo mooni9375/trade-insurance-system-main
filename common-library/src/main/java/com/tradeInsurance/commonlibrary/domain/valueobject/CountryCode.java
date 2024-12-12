@@ -9,7 +9,7 @@ public enum CountryCode {
     CHINA("CN", "China", false),
     GERMANY("DE", "Germany", false),
     FRANCE("FR", "France", false),
-    UNITED_KINGDOM("GB", "Unitevd Kingdom", false),
+    UNITED_KINGDOM("GB", "United Kingdom", false),
     ITALY("IT", "Italy", false),
     AUSTRALIA("AU", "Australia", false),
     BRAZIL("BR", "Brazil", false),
