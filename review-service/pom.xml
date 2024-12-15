@@ -49,6 +49,21 @@
     <dependencyManagement>
         <dependencies>
             <!-- Internal Dependencies -->
+            <dependency>
+                <groupId>com.tradeInsurance</groupId>
+                <artifactId>review-container</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tradeInsurance</groupId>
+                <artifactId>review-domain-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tradeInsurance</groupId>
+                <artifactId>review-application-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
 
             <!-- Spring Cloud -->
