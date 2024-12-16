@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a788c1-6274-4363-92cf-8464c011f67b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/dto/message/ReviewAppMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ports/output/message/publisher/review/ReviewResponseMessagePublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ports/output/repository/ReviewRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewCreateCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewCreateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ReviewCreateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/dto/CreateReviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/dto/create/CreateReviewCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/dto/CreateReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/dto/create/CreateReviewResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/mapper/ReviewDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/mapper/ReviewDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ports/input/service/ReviewApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/ports/input/service/ReviewApplicationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain/entity/Review.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +114,7 @@
       <workItem from="1734059223781" duration="1952000" />
       <workItem from="1734152101247" duration="812000" />
       <workItem from="1734300798163" duration="597000" />
-      <workItem from="1734302883248" duration="7517000" />
+      <workItem from="1734302883248" duration="9542000" />
     </task>
     <servers />
   </component>

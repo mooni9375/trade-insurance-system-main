@@ -40,7 +40,7 @@ public class ReviewDataMapper {
 
         return ReviewAppMessage.builder()
                 .appId(reviewCreatedEvent.getReview().getAppId().toString())
-//                .reviewId(reviewCreatedEvent.getReview().getReviewId().getValue().toString())
+                .reviewId(reviewCreatedEvent.getReview().getId().getValue().toString())
                 .createdAt(reviewCreatedEvent.getCreatedAt())
                 .build();
     }

@@ -68,7 +68,6 @@ public class Review extends AggregateRoot<ReviewId> {
         }
         reviewStatus = ReviewStatus.REJECTED;
     }
-
     // ***** Review Status 변경 영역 END *****
 
 
