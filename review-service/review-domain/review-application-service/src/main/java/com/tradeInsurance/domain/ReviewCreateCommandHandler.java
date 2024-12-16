@@ -1,7 +1,7 @@
 package com.tradeInsurance.domain;
 
-import com.tradeInsurance.domain.dto.CreateReviewCommand;
-import com.tradeInsurance.domain.dto.CreateReviewResponse;
+import com.tradeInsurance.domain.dto.create.CreateReviewCommand;
+import com.tradeInsurance.domain.dto.create.CreateReviewResponse;
 import com.tradeInsurance.domain.event.ReviewCreatedEvent;
 import com.tradeInsurance.domain.mapper.ReviewDataMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,8 @@ public class ReviewCreateCommandHandler {
     private final ReviewDataMapper reviewDataMapper;
 
     @Autowired
-    public ReviewCreateCommandHandler(ReviewCreateHelper reviewCreateHelper, ReviewDataMapper reviewDataMapper) {
+    public ReviewCreateCommandHandler(ReviewCreateHelper reviewCreateHelper,
+                                      ReviewDataMapper reviewDataMapper) {
         this.reviewCreateHelper = reviewCreateHelper;
         this.reviewDataMapper = reviewDataMapper;
     }
@@ -33,13 +34,13 @@ public class ReviewCreateCommandHandler {
         log.info("Review is created with id: {}", reviewCreatedEvent.getReview().getId().getValue());
 
         // Event publishing
-        // Mapping : AppCreatedEvent -> AppReviewMessage
-//        AppReviewMessage appReviewMessage = reviewDataMapper.appCreatedEventToAppReviewMessage(appCreatedEvent);
-//        reviewRequestMessagePublisher.publish(appReviewMessage);
+        // Mapping : ReviewCreatedEvent -> ReviewAppMessage
+//        ReviewAppMessage reviewAppMessage = reviewDataMapper.reviewCreatedEventToReviewAppMessage(reviewCreatedEvent);
+//        reviewRequestMessagePublisher.publish(reviewAPpMessage);
 
         // Response return
         // Mapping : ReviewCreatedEvent -> CreateReviewResponse
-        return reviewDataMapper.reviewToCrateReviewResponse(reviewCreatedEvent.getReview(), "Review created successfully.");
+        return reviewDataMapper.reviewToCreateReviewResponse(reviewCreatedEvent.getReview(), "Review created successfully.");
     }
 
 }

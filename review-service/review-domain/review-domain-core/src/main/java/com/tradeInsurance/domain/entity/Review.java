@@ -179,7 +179,6 @@ public class Review extends AggregateRoot<ReviewId> {
 
 
     // ***** getter 영역 START *****
-
     public AppId getAppId() {
         return appId;
     }
@@ -319,7 +318,7 @@ public class Review extends AggregateRoot<ReviewId> {
             return this;
         }
 
-        public Builder getReviewStatus(ReviewStatus val) {
+        public Builder reviewStatus(ReviewStatus val) {
             reviewStatus = val;
             return this;
         }
@@ -329,8 +328,9 @@ public class Review extends AggregateRoot<ReviewId> {
             return this;
         }
 
-        public ZonedDateTime getCreatedAt() {
-            return createdAt;
+        public Builder createdAt(ZonedDateTime val) {
+            createdAt = val;
+            return this;
         }
 
         public Review build() {

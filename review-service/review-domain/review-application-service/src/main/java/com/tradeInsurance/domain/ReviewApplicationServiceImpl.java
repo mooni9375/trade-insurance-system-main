@@ -1,7 +1,7 @@
 package com.tradeInsurance.domain;
 
-import com.tradeInsurance.domain.dto.CreateReviewCommand;
-import com.tradeInsurance.domain.dto.CreateReviewResponse;
+import com.tradeInsurance.domain.dto.create.CreateReviewCommand;
+import com.tradeInsurance.domain.dto.create.CreateReviewResponse;
 import com.tradeInsurance.domain.ports.input.service.ReviewApplicationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
