@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a788c1-6274-4363-92cf-8464c011f67b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../app-service/app-container/src/main/java/com/tradeInsurance/container/KafkaTopicConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../infrastructure/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../infrastructure/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../infrastructure/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../infrastructure/kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-container/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-container/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-container/src/main/java/com/tradeInsurance/container/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-container/src/main/java/com/tradeInsurance/container/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-container/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-container/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-domain/app-application-service/src/main/java/com/tradeInsurance/domain/AppCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-domain/app-application-service/src/main/java/com/tradeInsurance/domain/AppCreateCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-domain/app-application-service/src/main/java/com/tradeInsurance/domain/config/AppServiceConfigData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-messaging/src/main/java/com/tradeInsurance/messaging/publisher/kafka/AppReviewEventKafkaPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-messaging/src/main/java/com/tradeInsurance/messaging/publisher/kafka/AppReviewEventKafkaPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/mapper/ReviewDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-application-service/src/main/java/com/tradeInsurance/domain/mapper/ReviewDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain/entity/Review.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,31 +61,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ReviewContainerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mooni/development/tradeInsurance/review-service/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ReviewContainerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mooni/development/tradeInsurance/review-service/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/review-domain/review-domain-core/src/main/java/com/tradeInsurance/domain" />
@@ -114,7 +125,12 @@
       <workItem from="1734059223781" duration="1952000" />
       <workItem from="1734152101247" duration="812000" />
       <workItem from="1734300798163" duration="597000" />
-      <workItem from="1734302883248" duration="9542000" />
+      <workItem from="1734302883248" duration="12446000" />
+      <workItem from="1734405507783" duration="1925000" />
+      <workItem from="1734702464017" duration="26000" />
+      <workItem from="1734702501492" duration="163000" />
+      <workItem from="1734702680660" duration="62000" />
+      <workItem from="1734702750994" duration="598000" />
     </task>
     <servers />
   </component>
