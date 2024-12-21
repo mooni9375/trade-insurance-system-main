@@ -1,35 +1,37 @@
 package com.tradeInsurance.domain.mapper;
 
 import com.tradeInsurance.commonlibrary.domain.valueobject.AppId;
+import com.tradeInsurance.commonlibrary.domain.valueobject.CountryCode;
 import com.tradeInsurance.commonlibrary.domain.valueobject.Money;
 import com.tradeInsurance.commonlibrary.domain.valueobject.ReviewStatus;
 import com.tradeInsurance.domain.dto.create.CreateReviewCommand;
 import com.tradeInsurance.domain.dto.create.CreateReviewResponse;
-import com.tradeInsurance.domain.dto.message.ReviewAppMessage;
+import com.tradeInsurance.domain.dto.message.ReviewRequest;
 import com.tradeInsurance.domain.entity.Review;
 import com.tradeInsurance.domain.event.ReviewCreatedEvent;
 import org.springframework.stereotype.Component;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.UUID;
 
 @Component
 public class ReviewDataMapper {
 
-    public Review createReviewCommandToReview(CreateReviewCommand createReviewCommand) {
+    public Review reviewRequestToReview(ReviewRequest reviewRequest) {
 
         return Review.builder()
-                .appId(new AppId(createReviewCommand.getAppId()))
-                .appAmount(new Money(createReviewCommand.getAppAmount()))
-                .importerCountryCode(createReviewCommand.getImporterCountryCode())
-//                .discountRate(createReviewCommand.getDiscountRate())
-//                .surchargeRate(createReviewCommand.getSurchargeRate())
-//                .premiumRate(createReviewCommand.getPremiumRate())
-//                .insuranceCoverageRate(createReviewCommand.getInsuranceCoverageRate())
-//                .insuranceAmount(new Money(createReviewCommand.getInsuranceAmount()))
-//                .reviewOpinion(new StringBuilder(createReviewCommand.getReviewOpinion()))
-                .reviewStatus(ReviewStatus.REVIEWING)
-//                .createdAt(ZonedDateTime.now(ZoneId.of("UTC")))
+                .appId(new AppId(UUID.fromString(reviewRequest.getAppId())))
+                .appAmount(new Money(reviewRequest.getAppAmount()))
+//                .importerCountryCode(CountryCode.valueOf(reviewRequest.getImporterCountryCode()))
+                .importerCountryCode(CountryCode.fromCode(reviewRequest.getImporterCountryCode()))
+//                .discountRate(0)
+//                .surchargeRate(0)
+//                .premiumRate(new BigDecimal(BigInteger.ZERO))
+//                .insuranceCoverageRate(0)
+//                .insuranceAmount(new Money(BigDecimal.ZERO))
+//                .reviewOpinion(new StringBuilder())
+//                .reviewStatus(null)
                 .build();
     }
 
@@ -37,19 +39,5 @@ public class ReviewDataMapper {
 
         return null;
     }
-
-    public ReviewAppMessage reviewCreatedEventToReviewAppMessage(ReviewCreatedEvent reviewCreatedEvent) {
-
-        return ReviewAppMessage.builder()
-                .appId(reviewCreatedEvent.getReview().getAppId().toString())
-                .reviewId(reviewCreatedEvent.getReview().getId().getValue().toString())
-                .createdAt(reviewCreatedEvent.getCreatedAt())
-                .build();
-    }
-
-
-
-
-
 
 }

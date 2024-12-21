@@ -1,5 +1,6 @@
 package com.tradeInsurance.messaging.listener.kafka;
 
+import com.tradeInsurance.domain.dto.message.ReviewRequest;
 import com.tradeInsurance.domain.ports.input.message.listener.app.ReviewRequestMessageListener;
 import com.tradeInsurance.messaging.kafka.consumer.KafkaConsumer;
 import com.tradeInsurance.messaging.kafka.model.ReviewRequestModel;
@@ -23,10 +24,20 @@ public class ReviewRequestKafkaListener implements KafkaConsumer<ReviewRequestMo
         this.reviewMessagingDataMapper = reviewMessagingDataMapper;
     }
 
-
     @Override
     @KafkaListener(topics = "review-request-topic", groupId = "tradeInsurance")
     public void receive(ReviewRequestModel reviewRequestModel) {
         System.out.println("***** reviewRequestModel.toString() = " + reviewRequestModel.toString());
+
+        try {
+            ReviewRequest reviewRequest
+                    = reviewMessagingDataMapper.reviewRequestMessageToReviewRequest(reviewRequestModel);
+            reviewRequestMessageListener.completeReview(reviewRequest);
+            log.info("ReviewRequest Received from Kafka for app id: {}", reviewRequestModel.getAppId());
+
+        } catch (Exception e) {
+            log.error("Error while receiving ReviewRequestModel " +
+                    "to kafka with app id: {} and error:{}", reviewRequestModel.getAppId(), e.getMessage());
+        }
     }
 }

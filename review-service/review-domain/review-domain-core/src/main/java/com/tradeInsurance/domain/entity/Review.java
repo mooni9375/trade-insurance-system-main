@@ -5,8 +5,10 @@ import com.tradeInsurance.commonlibrary.domain.valueobject.*;
 import com.tradeInsurance.domain.exception.ReviewDomainException;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -32,7 +34,7 @@ public class Review extends AggregateRoot<ReviewId> {
     private Money insuranceAmount;
 
     // 심사의견
-    private StringBuilder reviewOpinion = new StringBuilder();
+    private StringBuilder reviewOpinion;
 
     private ReviewStatus reviewStatus;
 
@@ -45,6 +47,13 @@ public class Review extends AggregateRoot<ReviewId> {
     public void initializeReview() {
         setId(new ReviewId(UUID.randomUUID()));
         createdAt = ZonedDateTime.now(ZoneId.of("UTC"));
+
+        discountRate = 0;
+        surchargeRate = 0;
+        premiumRate = new BigDecimal(BigInteger.ZERO);
+        insuranceCoverageRate = 0;
+        insuranceAmount = new Money(BigDecimal.ZERO);
+        reviewOpinion = new StringBuilder();
         reviewStatus = ReviewStatus.REVIEWING;
 
         // 고위험국인 경우 부보율과 할증률 각각 50%, 30%로 생성.
@@ -73,10 +82,12 @@ public class Review extends AggregateRoot<ReviewId> {
 
     // ***** 심사 검증 영역 START *****
     public void validateReview() {
-        validateInitialReview();
-        validateAppAmount();
-        validateMinimumInsuranceAmount();
-        validateInsuranceAmountUnit();
+        if (reviewStatus != null || reviewStatus != ReviewStatus.REVIEWING) {
+//            validateInitialReview();
+//            validateAppAmount();
+//            validateMinimumInsuranceAmount();
+//            validateInsuranceAmountUnit();
+        }
     }
 
     private void validateInitialReview() {

@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReviewCreateCommandHandler {
 
-    private final ReviewCreateHelper reviewCreateHelper;
+    private final ReviewRequestHelper reviewRequestHelper;
     private final ReviewDataMapper reviewDataMapper;
 
     @Autowired
-    public ReviewCreateCommandHandler(ReviewCreateHelper reviewCreateHelper,
+    public ReviewCreateCommandHandler(ReviewRequestHelper reviewRequestHelper,
                                       ReviewDataMapper reviewDataMapper) {
-        this.reviewCreateHelper = reviewCreateHelper;
+        this.reviewRequestHelper = reviewRequestHelper;
         this.reviewDataMapper = reviewDataMapper;
     }
 
@@ -29,9 +29,10 @@ public class ReviewCreateCommandHandler {
      */
     public CreateReviewResponse createReview(CreateReviewCommand createReviewCommand) {
 
+
         // Transaction processing
-        ReviewCreatedEvent reviewCreatedEvent = reviewCreateHelper.persistReview(createReviewCommand);
-        log.info("Review is created with id: {}", reviewCreatedEvent.getReview().getId().getValue());
+//        ReviewCreatedEvent reviewCreatedEvent = reviewRequestHelper.persistReview(createReviewCommand);
+//        log.info("Review is created with id: {}", reviewCreatedEvent.getReview().getId().getValue());
 
         // Event publishing
         // Mapping : ReviewCreatedEvent -> ReviewAppMessage
@@ -40,7 +41,8 @@ public class ReviewCreateCommandHandler {
 
         // Response return
         // Mapping : ReviewCreatedEvent -> CreateReviewResponse
-        return reviewDataMapper.reviewToCreateReviewResponse(reviewCreatedEvent.getReview(), "Review created successfully.");
+//        return reviewDataMapper.reviewToCreateReviewResponse(reviewCreatedEvent.getReview(), "Review created successfully.");
+        return null;
     }
 
 }

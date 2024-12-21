@@ -29,15 +29,16 @@ public class AppReviewEventKafkaPublisher implements ReviewRequestMessagePublish
     @Override
     public void publish(AppReviewMessage appReviewMessage) {
 
-        ReviewRequestModel reviewRequestModel = appMessagingDataMapper.appReviewMessageToReviewRequestModel(appReviewMessage);
+        ReviewRequestModel reviewRequestModel
+                = appMessagingDataMapper.appReviewMessageToReviewRequestModel(appReviewMessage);
 
         try {
             kafkaProducer.send("review-request-topic", reviewRequestModel);
-            log.info("ReviewRequestModel sent to Kafka for order id: {}", reviewRequestModel.getAppId());
+            log.info("ReviewRequestModel sent to Kafka for app id: {}", reviewRequestModel.getAppId());
 
         } catch (Exception e) {
             log.error("Error while sending ReviewRequestModel " +
-                            "to kafka with order id: {} and  error: {}", reviewRequestModel.getAppId(), e.getMessage());
+                            "to kafka with app id: {} and  error: {}", reviewRequestModel.getAppId(), e.getMessage());
         }
 
 

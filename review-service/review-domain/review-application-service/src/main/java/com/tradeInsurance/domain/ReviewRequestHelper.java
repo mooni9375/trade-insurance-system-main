@@ -1,6 +1,7 @@
 package com.tradeInsurance.domain;
 
 import com.tradeInsurance.domain.dto.create.CreateReviewCommand;
+import com.tradeInsurance.domain.dto.message.ReviewRequest;
 import com.tradeInsurance.domain.entity.Review;
 import com.tradeInsurance.domain.event.ReviewCreatedEvent;
 import com.tradeInsurance.domain.exception.ReviewDomainException;
@@ -12,25 +13,25 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Component
-public class ReviewCreateHelper {
+public class ReviewRequestHelper {
 
     private ReviewDomainService reviewDomainService;
     private ReviewRepository reviewRepository;
     private ReviewDataMapper reviewDataMapper;
 
-    public ReviewCreateHelper(ReviewDataMapper reviewDataMapper,
-                              ReviewDomainService reviewDomainService,
-                              ReviewRepository reviewRepository) {
+    public ReviewRequestHelper(ReviewDataMapper reviewDataMapper,
+                               ReviewDomainService reviewDomainService,
+                               ReviewRepository reviewRepository) {
         this.reviewDataMapper = reviewDataMapper;
         this.reviewDomainService = reviewDomainService;
         this.reviewRepository = reviewRepository;
     }
 
     @Transactional
-    public ReviewCreatedEvent persistReview(CreateReviewCommand createReviewCommand) {
+    public ReviewCreatedEvent persistReview(ReviewRequest reviewRequest) {
 
         // Mapping.
-        Review review = reviewDataMapper.createReviewCommandToReview(createReviewCommand);
+        Review review = reviewDataMapper.reviewRequestToReview(reviewRequest);
 
         // Validate and Initiate Review and get the Event.
         ReviewCreatedEvent reviewCreatedEvent = reviewDomainService.validateAndInitiateReview(review);

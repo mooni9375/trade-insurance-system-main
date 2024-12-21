@@ -1,8 +1,8 @@
 package com.tradeInsurance.domain.ports.output.message.publisher.review;
 
-import com.tradeInsurance.domain.dto.message.ReviewAppMessage;
+import com.tradeInsurance.domain.dto.message.ReviewRequest;
 
 public interface ReviewResponseMessagePublisher {
 
-    void publish(ReviewAppMessage reviewAppMessage);
+    void publish(ReviewRequest reviewRequest);
 }
