@@ -12,6 +12,7 @@
     <artifactId>review-domain</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>review-application-service</module>
         <module>review-domain-core</module>
     </modules>
 

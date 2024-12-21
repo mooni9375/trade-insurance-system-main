@@ -2,12 +2,16 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/review-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/review-dataaccess/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/review-dataaccess/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/review-application-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/review-application-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/review-domain-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/review-domain-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/review-messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/review-messaging/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

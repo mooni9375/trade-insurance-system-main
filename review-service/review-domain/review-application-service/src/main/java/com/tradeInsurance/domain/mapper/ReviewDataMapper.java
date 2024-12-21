@@ -8,10 +8,12 @@ import com.tradeInsurance.domain.dto.create.CreateReviewResponse;
 import com.tradeInsurance.domain.dto.message.ReviewAppMessage;
 import com.tradeInsurance.domain.entity.Review;
 import com.tradeInsurance.domain.event.ReviewCreatedEvent;
+import org.springframework.stereotype.Component;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
+@Component
 public class ReviewDataMapper {
 
     public Review createReviewCommandToReview(CreateReviewCommand createReviewCommand) {
