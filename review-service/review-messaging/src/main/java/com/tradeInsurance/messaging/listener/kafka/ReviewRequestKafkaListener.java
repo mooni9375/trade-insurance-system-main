@@ -27,7 +27,7 @@ public class ReviewRequestKafkaListener implements KafkaConsumer<ReviewRequestMo
     @Override
     @KafkaListener(topics = "review-request-topic", groupId = "tradeInsurance")
     public void receive(ReviewRequestModel reviewRequestModel) {
-        System.out.println("***** reviewRequestModel.toString() = " + reviewRequestModel.toString());
+        log.info("***** reviewRequestModel.toString() = {}", reviewRequestModel.toString());
 
         try {
             ReviewRequest reviewRequest

@@ -37,7 +37,7 @@ public class ReviewRequestHelper {
         ReviewCreatedEvent reviewCreatedEvent = reviewDomainService.validateAndInitiateReview(review);
 
         // Save Review
-        saveReview(review);
+        saveReview(reviewCreatedEvent.getReview());
         log.info("Review is created with id: {}", review.getId());
 
         // Return the Event for Publishing it.

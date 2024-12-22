@@ -23,7 +23,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
   datasource:
-    url: jdbc:postgresql://localhost:5432/tradeInsurance
+    url: jdbc:postgresql://localhost:5432/tradeInsurance_review
     username: mooni
     password: admin
     driver-class-name: org.postgresql.Driver

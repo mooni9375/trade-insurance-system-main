@@ -24,7 +24,7 @@ spring:
       ddl-auto: create-drop
   datasource:
 #    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=order&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified
-    url: jdbc:postgresql://localhost:5432/tradeInsurance
+    url: jdbc:postgresql://localhost:5432/tradeInsurance_app
     username: mooni
     password: admin
     driver-class-name: org.postgresql.Driver

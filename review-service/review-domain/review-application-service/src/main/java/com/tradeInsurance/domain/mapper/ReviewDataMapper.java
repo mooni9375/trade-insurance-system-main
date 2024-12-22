@@ -23,15 +23,15 @@ public class ReviewDataMapper {
         return Review.builder()
                 .appId(new AppId(UUID.fromString(reviewRequest.getAppId())))
                 .appAmount(new Money(reviewRequest.getAppAmount()))
-//                .importerCountryCode(CountryCode.valueOf(reviewRequest.getImporterCountryCode()))
                 .importerCountryCode(CountryCode.fromCode(reviewRequest.getImporterCountryCode()))
+//                .importerCountryCode(CountryCode.fromCode(reviewRequest.getImporterCountryCode()))
 //                .discountRate(0)
 //                .surchargeRate(0)
 //                .premiumRate(new BigDecimal(BigInteger.ZERO))
 //                .insuranceCoverageRate(0)
 //                .insuranceAmount(new Money(BigDecimal.ZERO))
 //                .reviewOpinion(new StringBuilder())
-//                .reviewStatus(null)
+//                .reviewStatus(ReviewStatus.REVIEWING)
                 .build();
     }
 

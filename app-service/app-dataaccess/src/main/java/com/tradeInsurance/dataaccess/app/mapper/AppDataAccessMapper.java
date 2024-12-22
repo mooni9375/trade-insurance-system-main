@@ -1,5 +1,6 @@
 package com.tradeInsurance.dataaccess.app.mapper;
 
+import com.tradeInsurance.commonlibrary.domain.valueobject.CountryCode;
 import com.tradeInsurance.dataaccess.app.entity.AppEntity;
 import com.tradeInsurance.dataaccess.app.entity.AppStreetAddressEntity;
 import com.tradeInsurance.commonlibrary.domain.valueobject.AppId;
@@ -24,7 +25,7 @@ public class AppDataAccessMapper {
                 .customerId(app.getCustomerId().getValue())
                 .exporterName(app.getExporterName())
                 .exporterAddress(streetAddressToAppStreetAddressEntity(app.getExporterAddress()))
-                .importerCountryCode(app.getImporterCountryCode())
+                .importerCountryCode(CountryCode.fromCode(app.getImporterCountryCode().getCode()))
                 .importerName(app.getImporterName())
                 .importerAddress(streetAddressToAppStreetAddressEntity(app.getImporterAddress()))
                 .exportProduct(app.getExportProduct())
