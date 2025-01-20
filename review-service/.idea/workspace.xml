@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a788c1-6274-4363-92cf-8464c011f67b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../apigateway-service/src/main/java/com/tradeInsurance/apigatewayservice/globalFilter/GlobalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../apigateway-service/src/main/java/com/tradeInsurance/apigatewayservice/globalFilter/GlobalFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apigateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../apigateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-service/app-domain/app-application-service/src/main/java/com/tradeInsurance/domain/AppCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app-service/app-domain/app-application-service/src/main/java/com/tradeInsurance/domain/AppCreateCommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
