@@ -22,7 +22,7 @@ public class AppStreetAddressEntity {
 //    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "APP_ID")
 //    private AppEntity app;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "app_id")
     private AppEntity app;
 
